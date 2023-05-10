@@ -34,11 +34,11 @@
                   {!! Form::open([ 'route' => 'login.confirm', 'method' => 'post' ]) !!}
                     
                     <div class="form-group">
-                    	{{ Form::text('email', NULL, [ 'class'=>'form-control form-control-user', 'id' => 'email', 'placeholder' => 'Enter Email Address..' ]) }}
+                    	{{ Form::text('email', NULL, [ 'class'=>'form-control form-control-user', 'id' => 'login_form_email', 'placeholder' => 'Enter Email Address..' ]) }}
                     </div>
 
                     <div class="form-group">
-                      {{ Form::password('password', [ 'class'=>'form-control form-control-user', 'id' => 'password', 'placeholder' => 'Enter Password' ]) }}
+                      {{ Form::password('password', [ 'class'=>'form-control form-control-user', 'id' => 'login_form_password', 'placeholder' => 'Enter Password' ]) }}
                     </div>
 
                     <div class="form-group">
@@ -49,6 +49,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>	
+                    <button id="login_input_fill_up" class="btn btn-info btn-user btn-block">Fill up</button>	
 
                     <div style="margin-top:20px;">
                       <p style="font-weight:bold; line-height:0px;">Login credentials :</p>

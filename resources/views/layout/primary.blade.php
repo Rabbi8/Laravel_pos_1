@@ -101,6 +101,15 @@
   @endif
 </script>
 
+{{-- Login form fill up  --}}
+<script>
+  $(document).on('click','#login_input_fill_up', function(e){
+    e.preventDefault();
+    $('#login_form_email').val('rabbi@gmail.com');
+    $('#login_form_password').val('12345678');
+  });
+</script>
+
 </body>
 
 </html>
