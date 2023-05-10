@@ -55,7 +55,7 @@
 			  <div class="form-group row">
 			    <label for="amount" class="col-sm-3 col-form-label">Amount <span class="text-danger">*</span>  </label>
 			    <div class="col-sm-9">
-			      {{ Form::text('amount', NULL, [ 'class'=>'form-control', 'id' => 'amount', 'placeholder' => 'Amount', 'required' ]) }}
+			      {{ Form::number('amount', NULL, [ 'class'=>'form-control', 'id' => 'amount', 'placeholder' => 'Amount', 'required' ]) }}
 			    </div>
 			  </div>
 
@@ -101,7 +101,7 @@
 				<div class="form-group row">
 				    <label for="amount" class="col-sm-3 col-form-label">Amount <span class="text-danger">*</span>  </label>
 				    <div class="col-sm-9">
-				      {{ Form::text('amount', NULL, [ 'class'=>'form-control', 'id' => 'amount', 'placeholder' => 'Amount', 'required' ]) }}
+				      {{ Form::number('amount', NULL, [ 'class'=>'form-control', 'id' => 'amount', 'placeholder' => 'Amount', 'required' ]) }}
 				    </div>
 				</div>
 
@@ -148,7 +148,7 @@
 				<div class="form-group row">
 				    <label for="challan_no" class="col-sm-3 col-form-label">Challan Number </label>
 				    <div class="col-sm-9">
-				      	{{ Form::text('challan_no', NULL, [ 'class'=>'form-control', 'id' => 'challan_no', 'placeholder' => 'Challan Number' ]) }}
+				      	{{ Form::number('challan_no', NULL, [ 'class'=>'form-control', 'id' => 'challan_no', 'placeholder' => 'Challan Number' ]) }}
 				    </div>
 				</div>
 
@@ -174,7 +174,7 @@
 
 
 
-{{-- Modal For Sales --}}
+{{-- Modal For Purchase --}}
 <div class="modal fade" id="newPurchase" tabindex="-1" role="dialog" aria-labelledby="newPurchaseModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 	  	{!! Form::open([ 'route' => ['user.purchases.store', $user->id], 'method' => 'post' ]) !!}
@@ -197,7 +197,7 @@
 				<div class="form-group row">
 				    <label for="challan_no" class="col-sm-3 col-form-label">Challan Number </label>
 				    <div class="col-sm-9">
-				      	{{ Form::text('challan_no', NULL, [ 'class'=>'form-control', 'id' => 'challan_no', 'placeholder' => 'Challan Number' ]) }}
+				      	{{ Form::number('challan_no', NULL, [ 'class'=>'form-control', 'id' => 'challan_no', 'placeholder' => 'Challan Number' ]) }}
 				    </div>
 				</div>
 
