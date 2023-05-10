@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Hash;
 Route::get('login', 'Auth\LoginController@login')->name('login');
 Route::post('login', 'Auth\LoginController@authenticate')->name('login.confirm');
 
+Route::get('app_name', function(){
+	return config('app.name');
+});
+
 
 
 Route::group(['middleware' => 'auth'], function() {
