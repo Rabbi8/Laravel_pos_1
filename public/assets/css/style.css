@@ -1,0 +1,25 @@
+.page_header {
+	margin-bottom: 20px;
+}
+
+.no_padding {
+	padding: 0px !important;
+}
+.no_margin {
+	margin: : 0px;
+}
+
+.invoice_items {
+	margin: 30px 5px 20px 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container-fluid {
+    padding: 0 5px;
+    margin: 2;
+  }
+  .card-body {
+  	padding: 8px;
+  	margin: 0;
+  }
+}
