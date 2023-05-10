@@ -144,11 +144,11 @@
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-          @if ( session('message') )
+          {{-- @if ( session('message') )
             <div class="alert alert-success" role="alert">
               {{ session('message') }}
             </div>
-          @endif
+          @endif --}}
 
           @yield('main_content')
 

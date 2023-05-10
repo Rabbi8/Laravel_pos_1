@@ -56,7 +56,7 @@ class ProductsController extends Controller
         if( Product::create($formData) ) {
             Session::flash('message', 'Product Created Successfully');
         }
-        
+        Session::put(['message'=> 'Product Created', 'notification_type'=>"success"]);
         return redirect()->to('products');
     }
 
@@ -111,7 +111,7 @@ class ProductsController extends Controller
         if( $product->save() ) {
             Session::flash('message', 'Product Updated Successfully');
         }
-        
+        Session::put(['message'=> 'Product Updated', 'notification_type'=>"success"]);
         return redirect()->to('products');
     }
 
@@ -126,7 +126,7 @@ class ProductsController extends Controller
         if( Product::destroy($id) ) {
             Session::flash('message', 'Product Deleted Successfully');
         }
-        
+        Session::put(['message'=> 'Product Deleted', 'notification_type'=>"success"]);
         return redirect()->to('products');   
     }
 }

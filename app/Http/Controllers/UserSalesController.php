@@ -36,7 +36,7 @@ class UserSalesController extends Controller
     	$formData['admin_id'] 	= Auth::id();
 
     	$invoice = SaleInvoice::create($formData);
-        
+        Session::put(['message'=> 'Sales Successfully created', 'notification_type'=>"success"]);
         return redirect()->route( 'user.sales.invoice_details', ['id' => $user_id, 'invoice_id' => $invoice->id] );
     }
 
@@ -57,7 +57,7 @@ class UserSalesController extends Controller
         $formData['sale_invoice_id'] = $invoice_id;
 
         if( SaleItem::create($formData) ) {
-            Session::flash('message', 'Item Added Successfully');
+            Session::put(['message'=> 'Item Added  Successfully', 'notification_type'=>"success"]);
         }
         
         return redirect()->route( 'user.sales.invoice_details', ['id' => $user_id, 'invoice_id' => $invoice_id] );
@@ -66,8 +66,8 @@ class UserSalesController extends Controller
 
     public function destroyItem($user_id, $invoice_id, $item_id)
     {
-        if( SaleItem::destroy( $item_id ) ) {
-            Session::flash('message', 'Item Deleted Successfully');   
+        if( SaleItem::destroy( $item_id ) ) {  
+            Session::put(['message'=> 'Item Deleted  Successfully', 'notification_type'=>"success"]);
         }
 
         return redirect()->route( 'user.sales.invoice_details', ['id' => $user_id, 'invoice_id' => $invoice_id] );
@@ -77,7 +77,7 @@ class UserSalesController extends Controller
     public function destroy($user_id, $invoice_id)
     {
         if( SaleInvoice::destroy($invoice_id) ) {
-            Session::flash('message', 'Invoice Deleted Successfully');
+            Session::put(['message'=> 'Invoice Deleted  Successfully', 'notification_type'=>"success"]);
         }
 
         return redirect()->route( 'user.sales', ['id' => $user_id] );

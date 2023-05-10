@@ -33,7 +33,7 @@ class UserGroupsController extends Controller
     {
     	$formData = $request->all();
     	if( Group::create($formData) ) {
-    		Session::flash('message', 'Group Created Successfully');
+    		Session::put(['message'=> 'User Group Created', 'notification_type'=>"success"]);
     	}
     	
     	return redirect()->to('groups');
@@ -42,9 +42,8 @@ class UserGroupsController extends Controller
     public function destroy($id)
     {
     	if( Group::find($id)->delete() ) {
-    		Session::flash('message', 'Group Deleted Successfully');
+    		Session::put(['message'=> 'User Group Deleted', 'notification_type'=>"success"]);
     	}
-    	
     	return redirect()->to('groups');
     }
 }

@@ -53,7 +53,7 @@ class CategoriesController extends Controller
         if( Category::create($formData) ) {
             Session::flash('message', $formData['title'] . ' Added Successfully');
         }
-        
+        Session::put(['message'=> 'Category Created', 'notification_type'=>"success"]);
         return redirect()->to('categories');
     }
 
@@ -87,7 +87,7 @@ class CategoriesController extends Controller
         if( $category->save() ) {
             Session::flash('message', 'Category Updated Successfully');
         }
-        
+        Session::put(['message'=> 'Category Updated', 'notification_type'=>"success"]);
         return redirect()->to('categories');
     }
 
@@ -102,7 +102,7 @@ class CategoriesController extends Controller
         if( Category::find($id)->delete() ) {
             Session::flash('message', 'Category Deleted Successfully');
         }
-        
+        Session::put(['message'=> 'Category Deleted', 'notification_type'=>"success"]);
         return redirect()->to('categories');
     }
 }

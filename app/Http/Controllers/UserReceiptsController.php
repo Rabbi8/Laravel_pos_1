@@ -35,7 +35,7 @@ class UserReceiptsController extends Controller
         }
 
     	if( Receipt::create($formData) ) {
-            Session::flash('message', 'Receipt Added Successfully');
+            Session::put(['message'=> 'Receipt Added Successfully', 'notification_type'=>"success"]);
         }
         if ($invoice_id) {
             return redirect()->route( 'user.sales.invoice_details', ['id' => $user_id, 'invoice_id' => $invoice_id] );
@@ -49,7 +49,7 @@ class UserReceiptsController extends Controller
     public function destroy($user_id, $receipt_id)
     {
     	if( Receipt::destroy($receipt_id) ) {
-            Session::flash('message', 'Receipt Deleted Successfully');
+            Session::put(['message'=> 'Receipt Deleted Successfully', 'notification_type'=>"success"]);
         }
         
         return redirect()->route('user.receipts', ['id' => $user_id]);

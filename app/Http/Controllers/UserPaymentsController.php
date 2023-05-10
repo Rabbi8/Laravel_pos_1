@@ -42,7 +42,7 @@ class UserPaymentsController extends Controller
         }
         
     	if( Payment::create($formData) ) {
-            Session::flash('message', 'Payment Added Successfully');
+            Session::put(['message'=> 'Payment Successfully Added', 'notification_type'=>"success"]);
         }
         
         if ($invoice_id) {
@@ -61,7 +61,7 @@ class UserPaymentsController extends Controller
     public function destroy($user_id, $payment_id)
     {	
     	if( Payment::destroy($payment_id) ) {
-            Session::flash('message', 'Payment Deleted Successfully');
+            Session::put(['message'=> 'Payment Deleted Successfully', 'notification_type'=>"success"]);
         }
         
         return redirect()->route('user.payments', ['id' => $user_id]);

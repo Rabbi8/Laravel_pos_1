@@ -57,7 +57,7 @@ class UsersController extends Controller
     {
         $formData = $request->all();
         if( User::create($formData) ) {
-            Session::flash('message', 'User Created Successfully');
+            Session::put(['message'=> 'User Created Successfully', 'notification_type'=>"success"]);
         }
         
         return redirect()->to('users');
@@ -107,7 +107,7 @@ class UsersController extends Controller
         $user->address      = $data['address'];
 
         if( $user->save() ) {
-            Session::flash('message', 'User Updated Successfully');
+            Session::put(['message'=> 'User Updated Successfully', 'notification_type'=>"success"]);
         }
         
         return redirect()->to('users');
@@ -122,7 +122,7 @@ class UsersController extends Controller
     public function destroy($id)
     {
         if( User::find($id)->delete() ) {
-            Session::flash('message', 'User Deleted Successfully');
+            Session::put(['message'=> 'User Deleted Successfully', 'notification_type'=>"success"]);
         }
         
         return redirect()->to('users');
