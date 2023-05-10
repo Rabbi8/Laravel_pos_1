@@ -6,7 +6,7 @@
 	padding: 0px !important;
 }
 .no_margin {
-	margin: : 0px;
+	margin: 0px;
 }
 
 .invoice_items {
@@ -22,4 +22,26 @@
   	padding: 8px;
   	margin: 0;
   }
+}
+
+
+/* toastr css  */
+.colored-toast.swal2-icon-success {
+  background-color: #a9e785 !important;
+}
+
+.colored-toast.swal2-icon-error {
+  background-color: #f27474 !important;
+}
+
+.colored-toast.swal2-icon-warning {
+  background-color: #f8bb86 !important;
+}
+
+.colored-toast.swal2-icon-info {
+  background-color: #3fc3ee !important;
+}
+
+.colored-toast.swal2-icon-question {
+  background-color: #87adbd !important;
 }

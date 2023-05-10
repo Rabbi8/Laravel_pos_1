@@ -50,6 +50,13 @@
 
                     <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>	
 
+                    <div style="margin-top:20px;">
+                      <p style="font-weight:bold; line-height:0px;">Login credentials :</p>
+                      <span fs-sm><strong> Email: </strong> rabbi@gmail.com </span>
+                      <br>
+                      <span fs-sm> <strong> Password: </strong> 12345678 </span>
+                    </div>
+
                   {!! Form::close() !!}
                   
                 </div>
