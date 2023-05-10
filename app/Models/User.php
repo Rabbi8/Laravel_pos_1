@@ -1,10 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
-use App\PurchaseInvoice;
-use App\PurchaseItem;
-use App\SaleItem;
+use App\Models\PurchaseInvoice;
+use App\Models\PurchaseItem;
+use App\Models\SaleItem;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
