@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Group;
+use App\Models\Group;
 use App\Http\Requests\CreateUserRequest;
 use App\Http\Requests\UpdateUserRequest;
-use App\SaleItem;
-use App\User;
+use App\Models\SaleItem;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Session;

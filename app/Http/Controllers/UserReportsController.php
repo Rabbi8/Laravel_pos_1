@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Payment;
-use App\PurchaseItem;
-use App\Receipt;
-use App\SaleItem;
-use App\User;
+use App\Models\Payment;
+use App\Models\PurchaseItem;
+use App\Models\Receipt;
+use App\Models\SaleItem;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 

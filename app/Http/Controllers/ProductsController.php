@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 
-use App\Category;
+use App\Models\Category;
 use App\Http\Requests\ProductRequest;
-use App\Product;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 

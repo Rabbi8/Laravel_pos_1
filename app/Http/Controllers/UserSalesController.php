@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\InvoiceProductRequest;
 use App\Http\Requests\InvoiceRequest;
-use App\Product;
-use App\SaleInvoice;
-use App\SaleItem;
-use App\User;
+use App\Models\Product;
+use App\Models\SaleInvoice;
+use App\Models\SaleItem;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;

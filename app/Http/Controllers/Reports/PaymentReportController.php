@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Reports;
 
 use App\Http\Controllers\Controller;
-use App\Payment;
+use App\Models\Payment;
 use Illuminate\Http\Request;
 
 class PaymentReportController extends Controller

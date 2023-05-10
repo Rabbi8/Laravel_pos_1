@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Reports;
 
 use App\Http\Controllers\Controller;
-use App\Payment;
-use App\PurchaseItem;
-use App\Receipt;
-use App\SaleItem;
+use App\Models\Payment;
+use App\Models\PurchaseItem;
+use App\Models\Receipt;
+use App\Models\SaleItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 

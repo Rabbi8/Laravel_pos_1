@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Reports;
 
 use App\Http\Controllers\Controller;
-use App\Receipt;
+use App\Models\Receipt;
 use Illuminate\Http\Request;
 
 class ReceiptReportController extends Controller
