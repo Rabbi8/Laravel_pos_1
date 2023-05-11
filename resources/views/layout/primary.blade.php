@@ -107,6 +107,8 @@
     e.preventDefault();
     $('#login_form_email').val('rabbi@gmail.com');
     $('#login_form_password').val('12345678');
+    $('#customCheck').attr('checked', '');
+
   });
 </script>
 
