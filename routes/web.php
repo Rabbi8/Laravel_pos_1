@@ -35,7 +35,6 @@ Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login', [LoginController::class, 'authenticate'])->name('login.confirm');
 
 
-
 Route::group(['middleware' => 'auth'], function() {
 	
 	Route::get('/', [DashboardController::class, 'index']);

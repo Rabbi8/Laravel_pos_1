@@ -6,6 +6,8 @@ use App\Models\PurchaseInvoice;
 use App\Models\PurchaseItem;
 use App\Models\SaleItem;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+
 
 class User extends Model
 {
