@@ -1,5 +1,6 @@
 <?php
 
+use App\Events\MailSend;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Auth\LoginController;
@@ -18,6 +19,8 @@ use App\Http\Controllers\Reports\ReceiptReportController;
 use App\Http\Controllers\Reports\DayReportsController;
 
 
+use App\Models\User;
+use App\Mail\WelcomeMail;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +36,7 @@ use App\Http\Controllers\Reports\DayReportsController;
 
 Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login', [LoginController::class, 'authenticate'])->name('login.confirm');
+
 
 
 Route::group(['middleware' => 'auth'], function() {
