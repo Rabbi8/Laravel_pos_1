@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\MailSend;
 use App\Models\Group;
 use App\Http\Requests\CreateUserRequest;
 use App\Http\Requests\UpdateUserRequest;
@@ -9,6 +10,7 @@ use App\Models\SaleItem;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 
 class UsersController extends Controller
@@ -58,6 +60,8 @@ class UsersController extends Controller
         $formData = $request->all();
         if( User::create($formData) ) {
             Session::put(['message'=> 'User Created Successfully', 'notification_type'=>"success"]);
+            $user = User::latest('id')->first();
+            MailSend::dispatch($user);
         }
         
         return redirect()->to('users');

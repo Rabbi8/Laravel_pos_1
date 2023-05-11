@@ -7,6 +7,7 @@ use App\Mail\WelcomeMail;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Mail;
+use App\Models\User;
 
 class UserMailSendByAdminCreated
 {
@@ -28,6 +29,11 @@ class UserMailSendByAdminCreated
      */
     public function handle(MailSend $event)
     {
-        Mail::to($event->user->email)->send(new WelcomeMail());
+        $users = User::all();
+
+        foreach ($users as $key => $user) {
+            Mail::to($user->email)->send(new WelcomeMail($event->user));
+        }
+        
     }
 }

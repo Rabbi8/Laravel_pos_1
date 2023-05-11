@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
@@ -208,8 +209,8 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
       <td style="overflow-wrap:break-word;word-break:break-word;padding:23px 10px 10px;font-family:arial,helvetica,sans-serif;" align="left">
         
   <div class="v-text-align" style="color: #ffffff; line-height: 150%; text-align: center; word-wrap: break-word;">
-    <p style="font-size: 14px; line-height: 150%;"><span style="font-family: Cabin, sans-serif; font-size: 14px; line-height: 21px;"><span style="font-size: 28px; line-height: 42px;"><span style="line-height: 42px; font-size: 28px;">We're happy </span></span></span></p>
-<p style="font-size: 14px; line-height: 150%;"><span style="font-family: Cabin, sans-serif; font-size: 14px; line-height: 21px;"><span style="font-size: 28px; line-height: 42px;"><span style="line-height: 42px; font-size: 28px;">you're here.</span></span></span></p>
+    <p style="font-size: 14px; line-height: 150%;"><span style="font-family: Cabin, sans-serif; font-size: 14px; line-height: 21px;"><span style="font-size: 28px; line-height: 42px;"><span style="line-height: 42px; font-size: 28px;">Hello {{ $data->name }}</span></span></span></p>
+<p style="font-size: 14px; line-height: 150%;"><span style="font-family: Cabin, sans-serif; font-size: 14px; line-height: 21px;"><span style="font-size: 28px; line-height: 42px;"><span style="line-height: 42px; font-size: 28px;">Your email is {{ $data->email }}</span></span></span></p>
   </div>
 
       </td>
